@@ -176,181 +176,102 @@
                                                     <input id="inputText3" name="id_bio" type="text" value="<%= user.id %>"
                                                         class="form-control">
                                                 </div>
-                                                <% if(datarpd){%>
+                                             
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Jenjang</label>
                                                     <input id="inputText3" name="jenjang" type="text"
-                                                        class="form-control" value="<%=datarpd.jenjang%>" readonly>
+                                                        class="form-control" value="<%=data.jenjang%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleFormControlTextarea1">Nama Sekolah</label>
                                                     <input id="inputText3" name="namaSekolah" type="text"
-                                                        class="form-control" value="<%=datarpd.namaSekolah%>" readonly>
+                                                        class="form-control" value="<%=data.namaSekolah%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Kota</label>
-                                                    <input id="inputText3" name="kota" type="text" class="form-control" value="<%=datarpd.kota%>" readonly>
+                                                    <input id="inputText3" name="kota" type="text" class="form-control" value="<%=data.kota%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Tahun Mulai</label>
-                                                    <input id="inputText3" name="thMulai" value="<%=datarpd.thMulai%>" type="text"
+                                                    <input id="inputText3" name="thMulai" value="<%=data.thMulai%>" type="text"
                                                         class="form-control" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Tahun Lulus</label>
                                                     <input id="inputText3" name="thLulus" type="text"
-                                                        class="form-control" value="<%=datarpd.thLulus%>" readonly>
+                                                        class="form-control" value="<%=data.thLulus%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputEmail">Jurusan</label>
                                                     <input id="inputEmail" type="text" name="jurusan"
-                                                        class="form-control" value="<%=datarpd.jurusan%>" readonly>
+                                                        class="form-control" value="<%=data.jurusan%>" readonly>
                                                 </div>
-                                                <%}else{%>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Jenjang</label>
-                                                        <input id="inputText3" name="jenjang" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlTextarea1">Nama Sekolah</label>
-                                                        <input id="inputText3" name="namaSekolah" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Kota</label>
-                                                        <input id="inputText3" name="kota" type="text" class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Tahun Mulai</label>
-                                                        <input id="inputText3" name="thMulai" value="" type="text"
-                                                            class="form-control" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Tahun Lulus</label>
-                                                        <input id="inputText3" name="thLulus" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputEmail">Jurusan</label>
-                                                        <input id="inputEmail" type="text" name="jurusan"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <%}%>
+                                            
                                             </div>
                                             <div class="tab-pane fade" id="contact-justify" role="tabpanel"
                                                 aria-labelledby="contact-tab-justify">
-                                                <% if(datarpl){%>
+                                             
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Nama Kursus</label>
                                                     <input id="inputText3" name="namaKursus" type="text"
-                                                        class="form-control" value="<%=datarpl.namaKursus%>" readonly>
+                                                        class="form-control" value="<%=data.namaKursus%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleFormControlTextarea1">Penyelenggara</label>
                                                     <input id="inputText3" name="penyelenggara" type="text"
-                                                        class="form-control" value="<%=datarpl.penyelenggara%>" readonly>
+                                                        class="form-control" value="<%=data.penyelenggara%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Tahun</label>
-                                                    <input id="inputText3" name="tahun" type="text" class="form-control" value="<%=datarpl.tahun%>" readonly>
+                                                    <input id="inputText3" name="tahun" type="text" class="form-control" value="<%=data.tahun%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Tempat</label>
                                                     <input id="inputText3" name="tempat" type="text"
-                                                        class="form-control" value="<%=datarpl.tempat%>" readonly>
+                                                        class="form-control" value="<%=data.tempat%>" readonly>
                                                 </div>
-                                                <%}else{%>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Nama Kursus</label>
-                                                        <input id="inputText3" name="namaKursus" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlTextarea1">Penyelenggara</label>
-                                                        <input id="inputText3" name="penyelenggara" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Tahun</label>
-                                                        <input id="inputText3" name="tahun" type="text" class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Tempat</label>
-                                                        <input id="inputText3" name="tempat" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <%}%>
+                                          
                                             </div>
                                             <div class="tab-pane fade" id="job-justify" role="tabpanel"
                                                 aria-labelledby="contact-tab-justify">
-                                                <% if(datarpk){%>
+                                            
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Nama Perusahaan</label>
                                                     <input id="inputText3" name="namaPerusahaan" type="text"
-                                                        class="form-control" value="<%=datarpk.namaPerusahaan%>" readonly>
+                                                        class="form-control" value="<%=data.namaPerusahaan%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label
                                                         for="exampleFormControlTextarea1">Alamat Perusahaan</label>
                                                     <textarea class="form-control" name="alamatPerusahaan"
                                                         id="exampleFormControlTextarea1" rows="3"
-                                                        readonly><%=datarpk.alamatPerusahaan%></textarea>
+                                                        readonly><%=data.alamatPerusahaan%></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Bidang</label>
-                                                    <input id="inputText3" name="bidang" type="text" class="form-control" value="<%=datarpk.bidang%>" readonly>
+                                                    <input id="inputText3" name="bidang" type="text" class="form-control" value="<%=data.bidang%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Jabatan</label>
                                                     <input id="inputText3" name="jabatan" type="text"
-                                                        class="form-control" value="<%=datarpk.jabatan%>" readonly>
+                                                        class="form-control" value="<%=data.jabatan%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Dari Tahun</label>
                                                     <input id="inputText3" name="dariTh" type="text"
-                                                        class="form-control" value="<%=datarpk.dariTh%>" readonly>
+                                                        class="form-control" value="<%=data.dariTh%>" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputText3" class="col-form-label">Sampai Tahun</label>
                                                     <input id="inputText3" name="sampaiTh" type="text"
-                                                        class="form-control" value="<%=datarpk.sampaiTh%>" readonly>
+                                                        class="form-control" value="<%=data.sampaiTh%>" readonly>
                                                 </div>
                                                 <!-- <button type="submit" class="btn btn-secondary">Simpan Data</button> -->
-                                                <%}else{%>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Nama Perusahaan</label>
-                                                        <input id="inputText3" name="namaPerusahaan" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label
-                                                            for="exampleFormControlTextarea1">Alamat Perusahaan</label>
-                                                        <textarea class="form-control" name="alamatPerusahaan"
-                                                            id="exampleFormControlTextarea1" rows="3"
-                                                            readonly></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Bidang</label>
-                                                        <input id="inputText3" name="bidang" type="text" class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Jabatan</label>
-                                                        <input id="inputText3" name="jabatan" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Dari Tahun</label>
-                                                        <input id="inputText3" name="dariTh" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="inputText3" class="col-form-label">Sampai Tahun</label>
-                                                        <input id="inputText3" name="sampaiTh" type="text"
-                                                            class="form-control" value="" readonly>
-                                                    </div>
-                                                    <!-- <button type="submit" class="btn btn-secondary">Simpan Data</button> -->
-                                                    <%}%>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Posisi Yang Dilamar</label>
+                                                    <input id="inputText3" name="posisi" type="text"
+                                                        class="form-control" value="<%=data.posisi%>" readonly>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>

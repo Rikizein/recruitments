@@ -96,7 +96,7 @@ router.get('/pelamar', sessionChecker, (req, res) => {
   let userId = req.session.user.id
   req.getConnection((err, conn) => {
     conn.query(`select * from vbiodata where id = ?`, [userId], (err, data) => {
-      res.render('pelamarBu', {
+      res.render('pelamar', {
         title:"Pelamar",
         data:data[0],
         user:req.session.user
