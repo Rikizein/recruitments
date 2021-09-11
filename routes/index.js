@@ -155,7 +155,14 @@ router.post('/update', (req, res) => {
             if (err) {
               console.log(err);
             }
-            res.redirect('/pelamar')
+            conn.query(`REPLACE INTO lamaran(id,id_pelamar,posisi)VALUES
+      (null,'${req.body.id_bio}','${req.body.posisi}')`, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        res.redirect('/pelamar')
+      })
+            
           })
         })
       })

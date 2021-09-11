@@ -38,16 +38,16 @@ router.post('/register', (req, res) => {
   req.getConnection((err, conn) => {
     conn.query(`select * from biodata where email = '${req.body.email}'`, (err, bioAccount) => {
       if (bioAccount.length > 0) {
-        req.flash(`failedRegisterMessage', 'Email '${req.body.email}' sudah digunakan, Silahkan gunakan email lain !`)
+        req.flash('failedRegisterMessage', `Email '${req.body.email}' sudah digunakan, Silahkan gunakan email lain !`)
         return res.redirect('/users/register')
       }
       conn.query(`insert into biodata(id,email,password)values(null, '${req.body.email}','${bcrypt.hashSync(req.body.password,bcrypt.genSaltSync(8))}')`, (err, results) => {
         if (err) {
           console.log(err);
-          req.flash(`failedRegisterMessage', 'Kesalahan saat melakukan Registrasi, pastikan semua field diisi dengan benar!`)
+          req.flash('failedRegisterMessage', `Kesalahan saat melakukan Registrasi, pastikan semua field diisi dengan benar!`)
           return res.redirect('/users/register')
         }else{
-          req.flash(`registerMessage', 'Register berhasil, silahkan LOGIN dengan mengklik tautan di bawah form !`)
+          req.flash('registerMessage', `Register berhasil, silahkan LOGIN dengan mengklik tautan di bawah form !`)
           res.redirect('/users/register')
         }
       })

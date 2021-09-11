@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Sep 2021 pada 09.39
+-- Waktu pembuatan: 11 Sep 2021 pada 10.26
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 7.0.31
 
@@ -48,7 +48,8 @@ CREATE TABLE `biodata` (
 INSERT INTO `biodata` (`id`, `nama`, `alamat`, `tempatLahir`, `tglLahir`, `hp`, `gender`, `email`, `password`, `isAdmin`) VALUES
 (1, 'Riki Hidayat', 'jl. cisaranten wetan', 'Bandung', '2021-09-11', '0897865432', 'L', 'riki@riki', '$2b$08$GjeTVQVGf4LHi00rYizoXu78OPtdyWxzJZaA5cHaYnLEhXhul.NA2', 0),
 (2, '', '', '', '0000-00-00', '', '', 'admin@admin', '$2b$08$UM68vUWPnnNKxi3HpXCreuHFQ4XmT9czKdG615RlOmLUzDmd3H2MK', 1),
-(3, 'Hanan Fathiya', 'jl. cisaranten wetan', 'Bandung', '2021-06-23', '67890456789', 'P', 'hanan@hanan', '$2b$08$cKDSRsb2Rimr.FJAA8PE/evaVjqK8br74E46x1IJ.pyyP1sTFTQX2', 0);
+(3, 'Hanan Fathiya', 'jl. cisaranten wetan', 'Bandung', '2021-06-23', '67890456789', 'P', 'hanan@hanan', '$2b$08$cKDSRsb2Rimr.FJAA8PE/evaVjqK8br74E46x1IJ.pyyP1sTFTQX2', 0),
+(7, 'Agus', 'Cilisung', 'Garut', '1984-02-11', '09876543', 'L,', 'agus@agus', '$2b$08$gj/1uod/NFGYxYK4U47a6./u2.Ni4Yshpm22dt/1bt5Gd06HiQmqW', 0);
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,8 @@ CREATE TABLE `lamaran` (
 
 INSERT INTO `lamaran` (`id`, `id_pelamar`, `posisi`, `status`, `isApply`, `tanggal_apply`) VALUES
 (1, 1, 'Manager', '', 0, '0000-00-00'),
-(2, 3, 'Supervisor', '', 0, '0000-00-00');
+(2, 3, 'Supervisor', '', 0, '0000-00-00'),
+(3, 7, 'Staff', '', 0, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -96,7 +98,8 @@ CREATE TABLE `riwayat_pekerjaan` (
 
 INSERT INTO `riwayat_pekerjaan` (`id`, `id_bio`, `namaPerusahaan`, `alamatPerusahaan`, `bidang`, `jabatan`, `dariTh`, `sampaiTh`) VALUES
 (1, 1, 'MCM', 'Jl.cibaduyut', 'Fashion', 'SVP', '2008', '2021'),
-(2, 3, 'Software House', 'jl. cisaranten wetan', 'Software', 'SVP', '2008', '2021');
+(2, 3, 'Software House', 'jl. cisaranten wetan', 'Software', 'SVP', '2008', '2021'),
+(4, 7, 'PT. Makmur', 'Cigondewah', 'Desain grafis', 'Staff', '2019', '2021');
 
 -- --------------------------------------------------------
 
@@ -119,7 +122,8 @@ CREATE TABLE `riwayat_pelatihan` (
 
 INSERT INTO `riwayat_pelatihan` (`id`, `id_bio`, `namaKursus`, `penyelenggara`, `tahun`, `tempat`) VALUES
 (1, 1, 'Web Design', 'Rubicamp', '2017', 'Bandung'),
-(2, 3, 'Web Design', 'COdago', '2019', 'Bandung');
+(2, 3, 'Web Design', 'COdago', '2019', 'Bandung'),
+(4, 7, 'Deain grafis', 'CV. Berkayra', '2019', 'Bandung');
 
 -- --------------------------------------------------------
 
@@ -144,7 +148,8 @@ CREATE TABLE `riwayat_pendidikan` (
 
 INSERT INTO `riwayat_pendidikan` (`id`, `id_bio`, `jenjang`, `namaSekolah`, `kota`, `thMulai`, `thLulus`, `jurusan`) VALUES
 (3, 1, 'SLTA', 'BINA HARAPAN', 'Bandung', '1991', '1994', 'IPS'),
-(4, 3, 'S1', 'UIN', 'Bandung', '2019', '2021', 'MANAGEMENT');
+(4, 3, 'S1', 'UIN', 'Bandung', '2019', '2021', 'MANAGEMENT'),
+(6, 7, 'SMA', 'CISKUL', 'Bandung', '1991', '1994', 'IPS');
 
 -- --------------------------------------------------------
 
@@ -236,31 +241,31 @@ ALTER TABLE `riwayat_pendidikan`
 -- AUTO_INCREMENT untuk tabel `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `lamaran`
 --
 ALTER TABLE `lamaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `riwayat_pekerjaan`
 --
 ALTER TABLE `riwayat_pekerjaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `riwayat_pelatihan`
 --
 ALTER TABLE `riwayat_pelatihan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `riwayat_pendidikan`
 --
 ALTER TABLE `riwayat_pendidikan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
