@@ -1,0 +1,326 @@
+<% include partials/head %>
+
+    <body>
+        <!-- ============================================================== -->
+        <!-- main wrapper -->
+        <!-- ============================================================== -->
+        <div class="dashboard-main-wrapper">
+            <!-- ============================================================== -->
+            <!-- navbar -->
+            <!-- ============================================================== -->
+            <% include partials/navbar %>
+                <!-- ============================================================== -->
+                <!-- end navbar -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- left sidebar -->
+                <!-- ============================================================== -->
+                <% include partials/sidebar %>
+                    <!-- ============================================================== -->
+                    <!-- end left sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- wrapper  -->
+                    <!-- ============================================================== -->
+                    <div class="dashboard-wrapper">
+                        <div class="container-fluid  dashboard-content">
+                            <!-- ============================================================== -->
+                            <!-- pageheader -->
+                            <!-- ============================================================== -->
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="page-header">
+                                        <h2 class="pageheader-title">BIODATA PELAMAR</h2>
+                                        <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac
+                                            porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                                        <div class="page-breadcrumb">
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#"
+                                                            class="breadcrumb-link">Profil</a></li>
+                                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">UI
+                                                            Elements</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">Tabs</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end pageheader -->
+                            <!-- ============================================================== -->
+
+                            <div class="row">
+                                <!-- ============================================================== -->
+                                <!-- justified tabs  -->
+                                <!-- ============================================================== -->
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5">
+                                    <!-- ============================================================== -->
+                                    <!-- Alert  -->
+                                    <!-- ============================================================== -->
+                                    <div class="alert alert-primary" role="alert">
+                                        <% if(user.nama){%>
+                                        PASTIKAN DATA ANDA SUDAH BENAR ! ......
+                                        <%}else{%>
+                                        SILAHKAN LENGKAPI BIODATA ANDA ! .......
+                                        <%}%>
+                                    </div>
+                                    <!-- ============================================================== -->
+                                    <!-- end alert  -->
+                                    <!-- ============================================================== -->
+                                    <!-- <div class="section-block">
+                                <h5 class="section-title">Justified Tabs</h5>
+                                <p>Takes the basic nav from above and adds the .nav-tabs class to generate a tabbed interface..</p>
+                            </div> -->
+                                    <!-- <a href="/update/<%=user.id%>" class="btn btn-secondary">Perbarui Biodata</a> -->
+                            <br><br>
+                                    <div class="tab-regular">
+                                        <ul class="nav nav-tabs nav-fill" id="myTab7" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="home-tab-justify" data-toggle="tab"
+                                                    href="#home-justify" role="tab" aria-controls="home"
+                                                    aria-selected="true">Data Diri</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="profile-tab-justify" data-toggle="tab"
+                                                    href="#profile-justify" role="tab" aria-controls="profile"
+                                                    aria-selected="false">Riwayat Pendidikan</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab-justify" data-toggle="tab"
+                                                    href="#contact-justify" role="tab" aria-controls="contact"
+                                                    aria-selected="false">Riwayat Pelatihan</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab-justify" data-toggle="tab"
+                                                    href="#job-justify" role="tab" aria-controls="contact"
+                                                    aria-selected="false">Riwayat Pekerjaan</a>
+                                            </li>
+                                        </ul>
+                                        <form action="/users/update/<%= user.id %>" method="POST">
+                                        <div class="tab-content" id="myTabContent7">
+                                            <div class="tab-pane fade show active" id="home-justify" role="tabpanel"
+                                                aria-labelledby="home-tab-justify">
+                                                <div class="row">
+                                                    
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <div class="card">
+                                                            <!-- <h5 class="card-header">Basic Form</h5> -->
+                                                            <div class="card-body">
+
+                                                                <div class="form-group">
+                                                                    <label for="inputText3"
+                                                                        class="col-form-label">Nama</label>
+                                                                    <input id="inputText3" name="nama" type="text"
+                                                                        class="form-control" value="<%=data.nama%>"  readonly>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label
+                                                                        for="exampleFormControlTextarea1">Alamat</label>
+                                                                    <textarea class="form-control" name="alamat"
+                                                                        id="exampleFormControlTextarea1" rows="3" value="<%=data.alamat%>"
+                                                                        readonly><%=data.alamat%></textarea>
+                                                                </div>
+                                                                <div class="form-group" id="ttlId">
+                                                                    <label for="inputText3"
+                                                                        class="col-form-label">Tempat Lahir</label>
+                                                                    <input id="tglId" name="tempatLahir"
+                                                                        type="text" class="form-control" value="<%=data.tempatLahir%>" readonly>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputText3"
+                                                                        class="col-form-label">Tanggal Lahir</label>
+                                                                    <input id="inputText3" name="tglLahir" type="text"
+                                                                        class="form-control" value="<%=data.tglLahir%>" readonly>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputText3" class="col-form-label">No.
+                                                                        HP</label>
+                                                                    <input id="inputText3" name="hp" type="text"
+                                                                        class="form-control" value="<%=data.hp%>" readonly>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputText3" class="col-form-label">Gender
+                                                                        </label>
+                                                                    <input id="inputText3" name="gender" type="text"
+                                                                        class="form-control" value="<%=data.gender%>" readonly>
+                                                                </div>
+                                                                <!-- <div class="form-group">
+                                                                    <label for="inputText3"
+                                                                        class="col-form-label">Gender</label>
+                                                                    <select class="form-control" name="gender" readonly>
+                                                                        <option value="" selected disabled>Pilih
+                                                                            Gender...</option>
+                                                                        <option value="L">Laki-laki</option>
+                                                                        <option value="P">Perempuan</option>
+                                                                    </select>
+                                                                </div> -->
+                                                                <div class="form-group">
+                                                                    <label for="inputEmail">Email</label>
+                                                                    <input id="inputEmail" type="email" name="email"
+                                                                        value="<%=data.email%>" class="form-control"
+                                                                        readonly>
+                                                                    <!-- <p>We'll never share your email with anyone else.</p> -->
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="profile-justify" role="tabpanel"
+                                                aria-labelledby="profile-tab-justify">
+                                                <div class="form-group" hidden>
+                                                    <label for="inputText3" class="col-form-label">ID Bio</label>
+                                                    <input id="inputText3" name="id_bio" type="text" value="<%= user.id %>"
+                                                        class="form-control">
+                                                </div>
+                                             
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Jenjang</label>
+                                                    <input id="inputText3" name="jenjang" type="text"
+                                                        class="form-control" value="<%=data.jenjang%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlTextarea1">Nama Sekolah</label>
+                                                    <input id="inputText3" name="namaSekolah" type="text"
+                                                        class="form-control" value="<%=data.namaSekolah%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Kota</label>
+                                                    <input id="inputText3" name="kota" type="text" class="form-control" value="<%=data.kota%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Tahun Mulai</label>
+                                                    <input id="inputText3" name="thMulai" value="<%=data.thMulai%>" type="text"
+                                                        class="form-control" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Tahun Lulus</label>
+                                                    <input id="inputText3" name="thLulus" type="text"
+                                                        class="form-control" value="<%=data.thLulus%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputEmail">Jurusan</label>
+                                                    <input id="inputEmail" type="text" name="jurusan"
+                                                        class="form-control" value="<%=data.jurusan%>" readonly>
+                                                </div>
+                                            
+                                            </div>
+                                            <div class="tab-pane fade" id="contact-justify" role="tabpanel"
+                                                aria-labelledby="contact-tab-justify">
+                                             
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Nama Kursus</label>
+                                                    <input id="inputText3" name="namaKursus" type="text"
+                                                        class="form-control" value="<%=data.namaKursus%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlTextarea1">Penyelenggara</label>
+                                                    <input id="inputText3" name="penyelenggara" type="text"
+                                                        class="form-control" value="<%=data.penyelenggara%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Tahun</label>
+                                                    <input id="inputText3" name="tahun" type="text" class="form-control" value="<%=data.tahun%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Tempat</label>
+                                                    <input id="inputText3" name="tempat" type="text"
+                                                        class="form-control" value="<%=data.tempat%>" readonly>
+                                                </div>
+                                          
+                                            </div>
+                                            <div class="tab-pane fade" id="job-justify" role="tabpanel"
+                                                aria-labelledby="contact-tab-justify">
+                                            
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Nama Perusahaan</label>
+                                                    <input id="inputText3" name="namaPerusahaan" type="text"
+                                                        class="form-control" value="<%=data.namaPerusahaan%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label
+                                                        for="exampleFormControlTextarea1">Alamat Perusahaan</label>
+                                                    <textarea class="form-control" name="alamatPerusahaan"
+                                                        id="exampleFormControlTextarea1" rows="3"
+                                                        readonly><%=data.alamatPerusahaan%></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Bidang</label>
+                                                    <input id="inputText3" name="bidang" type="text" class="form-control" value="<%=data.bidang%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Jabatan</label>
+                                                    <input id="inputText3" name="jabatan" type="text"
+                                                        class="form-control" value="<%=data.jabatan%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Dari Tahun</label>
+                                                    <input id="inputText3" name="dariTh" type="text"
+                                                        class="form-control" value="<%=data.dariTh%>" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Sampai Tahun</label>
+                                                    <input id="inputText3" name="sampaiTh" type="text"
+                                                        class="form-control" value="<%=data.sampaiTh%>" readonly>
+                                                </div>
+                                                <!-- <button type="submit" class="btn btn-secondary">Simpan Data</button> -->
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Posisi Yang Dilamar</label>
+                                                    <input id="inputText3" name="posisi" type="text"
+                                                        class="form-control" value="<%=data.posisi%>" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end justified tabs  -->
+                                <!-- ============================================================== -->
+                            </div>
+
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- footer -->
+                        <!-- ============================================================== -->
+                        <div class="footer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        Copyright © 2018 Concept. All rights reserved. Dashboard by <a
+                                            href="https://colorlib.com/wp/">Colorlib</a>.
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="text-md-right footer-links d-none d-sm-block">
+                                            <a href="javascript: void(0);">About</a>
+                                            <a href="javascript: void(0);">Support</a>
+                                            <a href="javascript: void(0);">Contact Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end footer -->
+                        <!-- ============================================================== -->
+                    </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end main wrapper -->
+        <!-- ============================================================== -->
+        <!-- Optional JavaScript -->
+        <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+        <script src="../assets/libs/js/main-js.js"></script>
+
+        <script>
+            $("#tgl").val($.format.date(new Date(), 'dd mm yy'));
+        </script>
+    </body>
+
+
+    </html>
